@@ -1,0 +1,81 @@
+
+
+.AProposWrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+
+.allAPropos{
+    max-width: 1440px;
+}
+
+.AProposWrapper .AProposTexte{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    p{
+        margin: 30px;
+        font-size: 20px;
+    }
+}
+
+.AProposWrapper h3{
+    margin: 30px 0px 0px 0px;
+}
+
+.competences{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.allCompétences{
+    display: flex;
+    position: relative;
+    flex-direction: column; 
+    align-items: center;
+}
+
+.schéma{
+    margin: 30px;
+    width: 50%;
+}
+
+.lineContainer {
+    position: absolute;
+    width: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -10;
+}
+
+.grayLine {
+    height: 1px; /* Hauteur de la ligne grise */
+    width: 100%;
+    background-color: #ccc; /* Couleur de la ligne grise */
+}
+
+.blackLine {
+    height: 2px; /* Hauteur de la ligne noire */
+    width: 10%; /* Longueur de la ligne noire */
+    background-color: black; /* Couleur de la ligne noire */
+    position: absolute;
+    top: 0;
+    animation: moveLine 5s linear infinite; /* Animation pour faire bouger la ligne */
+}
+
+@keyframes moveLine {
+    0%, 100% {
+        transform: translateX(0%);
+    }
+
+    50% {
+        transform: translateX(900%); /* Ajustez la distance à laquelle la ligne noire se déplace */
+    }
+}

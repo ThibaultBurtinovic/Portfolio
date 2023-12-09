@@ -1,0 +1,66 @@
+.homePageWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: linear-gradient(-45deg, #494949, #020202, #494949, #020202);
+    background-size: 400% 400%;
+    animation: gradient 25s ease infinite;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.infoHome {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 150px;
+    text-align: center;
+}
+
+.homePageWrapper h2 {
+    font-size: 62px;
+    color: white;
+    text-shadow: 2px 2px #000000;
+}
+
+.subtitle {
+    font-size: 42px;
+}
+
+.userLogo {
+    width: 22%;
+}
+
+.homePageWrapper a {
+    align-self: center;
+}
+
+.arrow {
+    width: 3%;
+    bottom: 50px;
+    position: absolute;
+
+    animation: bounceUpDown 2.5s infinite alternate;
+
+    @keyframes bounceUpDown {
+        from {
+            transform: translateY(0); /* Position initiale (haut) */
+        }
+        to {
+            transform: translateY(20px); /* Position finale (bas) */
+        }
+    }
+}

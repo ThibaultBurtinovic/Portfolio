@@ -1,0 +1,57 @@
+/* header.scss */
+
+.headerWrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    background-color: #fff;
+    z-index: 1000;
+    transition: transform 0.3s ease; 
+  
+    h1 {
+      font-size: 24px;
+      margin-left: 70px;
+    }
+  
+    &.hidden {
+      transform: translateY(-100%); 
+    }
+  
+    &:hover {
+      background-color: #fff;
+      
+      li:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+  
+  ul {
+    display: flex;
+    flex-direction: row;
+    column-gap: 30px;
+    margin-right: 70px;
+  }
+  
+  header li {
+    display: flex;
+    list-style: none;
+    font-size: 18px;
+    font-weight: 500;
+    transition: text-decoration 0.3s ease;
+  }
+  
+  header a {
+    text-decoration: none;
+    color: black;
+  }
+  
+  header li:hover {
+    text-decoration: underline;
+  }
+  
