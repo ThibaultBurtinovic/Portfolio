@@ -1,0 +1,36 @@
+.footerWrapper{
+    display: flex;
+    flex-direction: column;
+    background-color: #0A0A0A;
+    align-items: center;
+    padding: 50px;
+    
+}
+
+
+.imgFooter{
+    display: flex;
+    column-gap: 30px;
+    margin: 20px;
+}
+
+.footerWrapper h4{
+    color: white;
+}
+
+.footerWrapper img{
+    max-width: 50px;
+    width: 100%;
+}
+
+
+@media (max-width: 500px) {
+    .footerWrapper img{
+        max-width: 50px;
+        width: 80%;
+    }
+
+    .footerWrapper h4{
+        font-size: 13px;
+    }
+  }

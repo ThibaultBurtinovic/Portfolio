@@ -6,6 +6,7 @@ import HomePage from './components/HomePage/homePage.jsx';
 import APropos from './components/APropos/APropos.jsx';
 import Gallery from './components/Gallery/gallery.jsx';
 import Contact from './components/Contact/contact.jsx';
+import Footer from './components/Footer/footer.jsx';
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
       <APropos></APropos>
       <Gallery></Gallery>
       <Contact></Contact>
+      <Footer></Footer>
     </Router>
   );
 }

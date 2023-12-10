@@ -11,9 +11,9 @@ function APropos() {
       <div className="allAPropos">
       <div className="AProposTexte">
         <h3 id="a-propos">À&nbsp;propos</h3>
-          <p className="subTexte">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna
-            aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
-            Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel
+          <p className="subTexte">Diplômé en développement front-end après une formation intensive de six mois chez OpenClassrooms, 
+          je suis passionné par la création d'expériences utilisateur. Fort d'une transition réussie depuis mon passé en postproduction cinéma,  
+          je fusionne maintenant mes compétences avec ma nouvelle expertise technique.
           </p>
       </div>
         <div className="competences">

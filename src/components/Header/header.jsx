@@ -16,7 +16,7 @@ function Header() {
         setScrollDirection("up");
       }
 
-      setLastScrollPosition(scrollPosition);
+      setLastScrollPosition(prevScrollPosition => scrollPosition);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -28,7 +28,7 @@ function Header() {
 
   return (
     <header className={`headerWrapper ${scrollDirection === 'down' ? 'hidden' : ''}`}>
-      <h1>Thibault&nbsp;Burtinovic</h1>
+      <h1>Thibault Burtinovic</h1>
       <nav className="navHeader">
         <ul>
           <li><a href="#a-propos">À&nbsp;propos</a></li>

@@ -1,0 +1,135 @@
+
+
+.ContactWrapper{
+    margin: 50px 0px 50px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.clipBoardWrapper{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    
+}
+
+.contactTitle{
+    display: flex;
+    width: 30%;
+    margin-bottom: 20px;
+    min-width: 560px;
+}
+
+
+.clipBoard{
+    display: flex;
+    background-color: #0A0A0A;
+    width: 30%;
+    padding: 5px 15px 5px  15px;
+    border-radius: 10px;
+    min-width: 560px;
+}
+
+.contactMail{
+    background-color: #0A0A0A;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    resize: none;
+    border: none;
+    width: 100%;
+    font-size: 16px;
+    
+}
+
+.clipImg{
+    width: 25px;
+    color: white;
+}
+
+.black-line {
+    border: 1px solid black; 
+    margin: 30px 0; 
+    width: 20%;
+    min-width: 200px;
+}
+
+.formContact{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contactText{
+    background-color: #0A0A0A;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    resize: none;
+    border: none;
+    width: 100%;
+    font-size: 16px;
+    border-radius: 10px;
+    padding: 10px 15px 10px  15px;
+    margin-top: 5px;
+}
+
+.infoTexte{
+    font-weight: 500;
+    min-width: 560px;
+}
+
+.btnSend{
+    background-color: #0A0A0A;
+    color: white;
+    text-shadow: 2px 2px #0A0A0A;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    padding: 8px;
+    width: 30%;
+    align-self: center;
+    min-width: 110px;
+}
+
+.btnSend:hover{
+    background-color: #222222;
+
+}
+
+
+@media (max-width: 720px) {
+    .contactTitle{
+        min-width: 460px;
+    }
+    
+    
+    .clipBoard{
+        
+        min-width: 460px;
+    }
+
+    .infoTexte{
+        min-width: 460px;
+    }
+    
+}
+  
+
+@media (max-width: 500px) {
+    .contactTitle{
+        min-width: 320px;
+    }
+    
+    
+    .clipBoard{
+        
+        min-width: 320px;
+    }
+
+    .infoTexte{
+        min-width: 320px;
+    }
+  }

@@ -79,3 +79,24 @@
         transform: translateX(900%); /* Ajustez la distance à laquelle la ligne noire se déplace */
     }
 }
+
+
+@media (max-width: 720px) {
+    .AProposWrapper .AProposTexte p{
+        font-size: 18px;
+    }
+    
+  }
+  @media (max-width: 500px) {
+    .AProposWrapper .AProposTexte p{
+        font-size: 14px;
+    }
+    .schéma{
+        width: 70%;
+    }
+
+    .lineContainer {
+        width: 70%;
+    }
+    
+  }

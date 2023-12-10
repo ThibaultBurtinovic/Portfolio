@@ -27,7 +27,7 @@ function Gallery() {
   return (
     <div className="container">
       <h3 className="heading" id="mes-projets">Mes réalisations</h3>
-      <h4 className="subHeading">Retrouvez-moi sur GitHub pour explorer mes projets : <a href="https://github.com/ThibaultBurtinovic" className="linkSub"><span className="linkSub">cliquez ici</span></a></h4>
+      <h4 className="subHeading">Retrouvez-moi sur GitHub pour explorer mes projets&nbsp;: <a href="https://github.com/ThibaultBurtinovic" className="linkSub"><span className="linkSub">cliquez ici</span></a></h4>
       <Swiper
         effect={'coverflow'}
         grabCursor={true}
@@ -85,7 +85,7 @@ function Gallery() {
             <div className="hoverText">Créez la page d'accueil d'une agence de voyage avec HTML & CSS</div>
           </div>
         </SwiperSlide>
-        
+
 
         <div className="slider-controler">
           <div className="swiper-button-prev slider-arrow">
@@ -97,7 +97,28 @@ function Gallery() {
           <div className="swiper-pagination"></div>
         </div>
       </Swiper>
+      <div className="infoProj">
+        <h4 className="titleProj">Problématiques&nbsp;:</h4>
+        <div className="allUl">
+          <ul className="textProj">
+            <li>Booki&nbsp;: Responsive & FlexBox </li>
+            <li>Sophie&nbsp;B.&nbsp;: Fetch & Gestion des classes </li>
+          </ul>
+
+          <ul className="textProj">
+            <li>Nina&nbsp;C.&nbsp;: Optimisation / Resize IMG</li>
+            <li>Kasa.&nbsp;: React components & React Router</li>
+          </ul>
+
+          <ul className="textProj">
+            <li>Vieux&nbsp;G.&nbsp;: Gestion du token bearer & Organisation du code </li>
+            <li>Qwenta&nbsp;: Veille technique & Retranscription écrite</li>
+          </ul>
+        </div>
+      </div>
     </div>
+
+
   );
 }
 
