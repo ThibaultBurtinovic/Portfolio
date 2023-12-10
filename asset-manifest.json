@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/Portfolio/static/css/main.22654b5b.css",
+    "main.js": "/Portfolio/static/js/main.40a6de51.js",
+    "static/js/787.2c1cee2b.chunk.js": "/Portfolio/static/js/787.2c1cee2b.chunk.js",
+    "static/media/Booki.png": "/Portfolio/static/media/Booki.e17f9bed8d495591af99.png",
+    "static/media/Sophie.png": "/Portfolio/static/media/Sophie.1e12b55ee4ff3c5b3358.png",
+    "static/media/Backend.png": "/Portfolio/static/media/Backend.80069f2860f58ec8ada6.png",
+    "static/media/Qwenta.png": "/Portfolio/static/media/Qwenta.225aaa5f6a1059c1b2b4.png",
+    "static/media/Nina.png": "/Portfolio/static/media/Nina.8d956ee99bcbea927b75.png",
+    "static/media/Kasa.png": "/Portfolio/static/media/Kasa.23597df8666c047d700e.png",
+    "static/media/allCompétences.png": "/Portfolio/static/media/allCompétences.0fe2ac4d4aaa13aedb71.png",
+    "static/media/linkedin.svg": "/Portfolio/static/media/linkedin.2a75e960da04b9834b25545365e24c58.svg",
+    "static/media/github-mark-white.svg": "/Portfolio/static/media/github-mark-white.97ed8e7eef60d61ca469881dd6f34511.svg",
+    "index.html": "/Portfolio/index.html",
+    "static/media/clipboard.svg": "/Portfolio/static/media/clipboard.008bcf54884512c6828cf01f1ba9c284.svg",
+    "static/media/user.svg": "/Portfolio/static/media/user.bba5064ad22374e48c03c44b16302329.svg",
+    "static/media/arrow.svg": "/Portfolio/static/media/arrow.251606514c1eabb5fa6406765d68e078.svg",
+    "static/media/arrowRight.svg": "/Portfolio/static/media/arrowRight.b464185bdc8b805059362e972c8fd60d.svg",
+    "static/media/arrowLeft.svg": "/Portfolio/static/media/arrowLeft.674e430bad3db846cba473cff5119eaf.svg",
+    "main.22654b5b.css.map": "/Portfolio/static/css/main.22654b5b.css.map",
+    "main.40a6de51.js.map": "/Portfolio/static/js/main.40a6de51.js.map",
+    "787.2c1cee2b.chunk.js.map": "/Portfolio/static/js/787.2c1cee2b.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.22654b5b.css",
+    "static/js/main.40a6de51.js"
+  ]
+}
