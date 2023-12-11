@@ -5,6 +5,7 @@ import './header.scss';
 function Header() {
   const [scrollDirection, setScrollDirection] = useState("down");
   const [lastScrollPosition, setLastScrollPosition] = useState(0);
+  const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -16,6 +17,10 @@ function Header() {
         setScrollDirection("up");
       }
 
+      if (!scrolled && scrollPosition > 0) {
+        setScrolled(true);
+      }
+
       setLastScrollPosition(prevScrollPosition => scrollPosition);
     };
 
@@ -24,10 +29,10 @@ function Header() {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, [lastScrollPosition]);
+  }, [lastScrollPosition, scrolled]);
 
   return (
-    <header className={`headerWrapper ${scrollDirection === 'down' ? 'hidden' : ''}`}>
+    <header className={`headerWrapper ${scrolled && scrollDirection === 'down' ? 'hidden' : ''}`}>
       <h1>Thibault Burtinovic</h1>
       <nav className="navHeader">
         <ul>
