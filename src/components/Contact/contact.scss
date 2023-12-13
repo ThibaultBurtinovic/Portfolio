@@ -17,6 +17,7 @@
 .contactTitle{
     display: flex;
     width: 30%;
+    margin-top: 0;
     margin-bottom: 20px;
     min-width: 560px;
 }
@@ -29,6 +30,7 @@
     padding: 5px 15px 5px  15px;
     border-radius: 10px;
     min-width: 560px;
+    box-sizing: border-box;
 }
 
 .contactMail{
@@ -72,6 +74,7 @@
     border-radius: 10px;
     padding: 10px 15px 10px  15px;
     margin-top: 5px;
+    box-sizing: border-box;
 }
 
 .infoTexte{

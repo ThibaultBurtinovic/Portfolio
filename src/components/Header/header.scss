@@ -25,20 +25,20 @@
     &:hover {
       background-color: #fff;
       
-      li:hover {
+      .liNav:hover {
         text-decoration: underline;
       }
     }
   }
   
-  ul {
+  .ulNav {
     display: flex;
     flex-direction: row;
     column-gap: 30px;
     margin-right: 70px;
   }
   
-  header li {
+  .liNav {
     display: flex;
     list-style: none;
     font-size: 18px;
@@ -51,7 +51,7 @@
     color: black;
   }
   
-  header li:hover {
+  header .liNav:hover {
     text-decoration: underline;
   }
   
@@ -60,11 +60,12 @@
     .headerWrapper h1 {
       font-size: 20px;
     }
-    header li {
+    .liNav {
       font-size: 16px;
     }
     
   }
+
   @media (max-width: 720px) {
     .headerWrapper h1 {
       font-size: 18px;
@@ -72,30 +73,94 @@
 
     }
 
-    header ul {
-      margin-right: 20px;
-      column-gap: 20px;
-    }
-    
-    header li {
-      font-size: 14px;
-    }
-    
-    
-  }
-  @media (max-width: 500px) {
-    .headerWrapper h1 {
-      font-size: 14px;
-      margin-left: 20px;
-
-    }
-
-    header ul {
-      margin-right: 10px;
-      column-gap: 10px;
-    }
-    
-    header li {
-      font-size: 12px;
+    .ulNav {
+      display: none;
     }
   }
+
+  // Menu Burger
+
+  .navBurger{
+    display: none;
+  }
+
+ @media (max-width: 720px) {
+  .navBurger{
+    display: flex;
+  }
+  }
+
+
+  .menuBurger{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-right: 40px;
+   
+  }
+
+  .imgBurger{
+    width: 50px;
+  }
+
+ /* Définition des keyframes pour l'animation */
+@keyframes showBurger {
+  from {
+    opacity: 0;
+    height: 10px;
+  }
+  to {
+    opacity: 1;
+    height: 180px;
+  }
+}
+
+@keyframes showBurgerLi {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+    line-height: 60%;
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+    line-height: 250%;
+  }
+}
+
+
+
+
+.ulBurger {
+  background-color: #333333d0;
+  position: absolute;
+  left: 0px;
+  transform: translateY(64px);
+  margin: 0;
+  padding: 30px;
+  width: 100%;
+  height: 180px;
+  list-style: none;
+  animation: showBurger 0.5s ease-in-out forwards;
+}
+
+
+.hide {
+  display: none;
+}
+
+
+
+  .liBurger{
+    font-size: 25px;
+    font-weight: 600;
+    line-height: 250%;
+    animation: showBurgerLi 0.55s ease-in-out forwards;
+  }
+
+  
+  .liBurger a{
+    color: #fff;
+    text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.1), 1px
+  }
+
