@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 807 807">
+  <defs>
+    <style>.cls-1{fill-rule:evenodd;}</style>
+  </defs>
+  <g id="Calque_2" data-name="Calque 2">
+    <g id="Calque_1-2" data-name="Calque 1">
+      <path class="cls-1" fill="rgb(230, 62, 62" d="M403,0C626,0,807,180,807,403S626,807,403,807,0,626,0,403,180,0,403,0ZM276,222,403,350,531,222c35-35,88,19,53,54L457,403,584,531c35,35-18,88-53,53L403,457,276,584c-35,35-89-18-54-53L350,403,222,276C187,241,241,187,276,222Z"/>
+    </g>
+  </g>
+</svg>
