@@ -1,147 +1,148 @@
 /* header.scss */
 
 .headerWrapper {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 80px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  background-color: #fff;
+  z-index: 1000;
+  transition: transform 0.3s ease;
+
+
+
+  h1 {
+    font-size: 24px;
+    margin-left: 70px;
+  }
+
+  &.hidden {
+    transform: translateY(-100%);
+  }
+
+  &:hover {
     background-color: #fff;
-    z-index: 1000;
-    transition: transform 0.3s ease; 
-  
-    h1 {
-      font-size: 24px;
-      margin-left: 70px;
-    }
-  
-    &.hidden {
-      transform: translateY(-100%); 
-    }
-  
-    &:hover {
-      background-color: #fff;
-      
-      .liNav:hover {
-        text-decoration: underline;
-      }
+
+    .liNav:hover {
+      text-decoration: underline;
     }
   }
-  
-  .ulNav {
-    display: flex;
-    flex-direction: row;
-    column-gap: 30px;
-    margin-right: 70px;
+}
+
+.ulNav {
+  display: flex;
+  flex-direction: row;
+  column-gap: 30px;
+  margin-right: 70px;
+}
+
+.liNav {
+  display: flex;
+  list-style: none;
+  font-size: 18px;
+  font-weight: 500;
+  transition: text-decoration 0.3s ease;
+}
+
+header a {
+  text-decoration: none;
+  color: black;
+}
+
+header .liNav:hover {
+  text-decoration: underline;
+}
+
+
+@media (max-width: 1024px) {
+  .headerWrapper h1 {
+    font-size: 20px;
   }
-  
+
   .liNav {
-    display: flex;
-    list-style: none;
+    font-size: 16px;
+  }
+
+}
+
+@media (max-width: 720px) {
+  .headerWrapper h1 {
     font-size: 18px;
-    font-weight: 500;
-    transition: text-decoration 0.3s ease;
-  }
-  
-  header a {
-    text-decoration: none;
-    color: black;
-  }
-  
-  header .liNav:hover {
-    text-decoration: underline;
-  }
-  
+    margin-right: 30px;
+    order: 2;
+    text-align: center;
 
-  @media (max-width: 1024px) {
-    .headerWrapper h1 {
-      font-size: 20px;
-    }
-    .liNav {
-      font-size: 16px;
-    }
-    
   }
 
-  @media (max-width: 720px) {
-    .headerWrapper h1 {
-      font-size: 18px;
-      margin-left: 20px;
-
-    }
-
-    .ulNav {
-      display: none;
-    }
-  }
-
-  // Menu Burger
-
-  .navBurger{
+  .ulNav {
     display: none;
   }
+}
 
- @media (max-width: 720px) {
-  .navBurger{
+// Menu Burger
+
+.navBurger {
+  display: none;
+}
+
+@media (max-width: 720px) {
+  .navBurger {
     display: flex;
+    position: absolute;
+    margin-left: 30px;
+    order: 1;
   }
-  }
+}
 
 
-  .menuBurger{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    margin-right: 40px;
-   
-  }
+.menuBurger {
+  display: flex;
+  flex-direction: column;
+}
 
-  .imgBurger{
-    width: 50px;
-  }
+.imgBurger {
+  width: 50px;
+}
 
- /* Définition des keyframes pour l'animation */
+/* Définition des keyframes pour l'animation */
 @keyframes showBurger {
   from {
     opacity: 0;
-    height: 10px;
+    transform: translateY(64px) translateX(-80vh);
   }
+
   to {
     opacity: 1;
-    height: 180px;
+    transform: translateY(64px) translateX(0vh);
   }
 }
+
 
 @keyframes showBurgerLi {
   from {
     opacity: 0;
-    transform: translateY(-50px);
-    line-height: 60%;
   }
+
   to {
     opacity: 1;
-    transform: translateY(0px);
-    line-height: 250%;
   }
 }
 
-
-
-
 .ulBurger {
-  background-color: #333333d0;
-  position: absolute;
+  background-color: #0a0a0ae1;
+  backdrop-filter: blur(6px);
   left: 0px;
-  transform: translateY(64px);
   margin: 0;
   padding: 30px;
   width: 100%;
-  height: 180px;
+  height: 100vh;
+  position: fixed;
   list-style: none;
-  animation: showBurger 0.5s ease-in-out forwards;
+  animation: showBurger 0.3s ease-in-out forwards;
 }
 
 
@@ -149,18 +150,29 @@
   display: none;
 }
 
+.compBurger{
+  display: flex;
+  column-gap: 20px;
+}
 
 
-  .liBurger{
-    font-size: 25px;
-    font-weight: 600;
-    line-height: 250%;
-    animation: showBurgerLi 0.55s ease-in-out forwards;
-  }
+.liBurger {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 250%;
+  animation: showBurgerLi 0.3s ease-in-out forwards;
+}
 
-  
-  .liBurger a{
-    color: #fff;
-    text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.1), 1px
-  }
 
+.liBurger a {
+  color: #fff;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 5px;
+  text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.1), 1px
+}
+
+.iconBurger {
+  width: 25px;
+  opacity: 0.2;
+}

@@ -1,7 +1,14 @@
 // Header.jsx
+
 import React, { useState, useEffect } from "react";
 import './header.scss';
+
+
 import menuBurger from "../../assets/burger.svg";
+import me from "../../assets/me.svg";
+import project from "../../assets/project.svg";
+import mail from "../../assets/mail.svg";
+
 
 function Header() {
   const [scrollDirection, setScrollDirection] = useState("down");
@@ -49,27 +56,52 @@ function Header() {
 
   const handleBurgerItemClick = () => {
     setClickNav(true);
-    
   };
+
+  useEffect(() => {
+    const handleOverflow = () => {
+      if (isBurgerMenuOpen) {
+        document.body.style.overflow = 'visible';
+      } else {
+        document.body.style.overflow = 'hidden';
+      }
+    };
+
+    handleOverflow();
+
+    // Cleanup
+    return () => {
+      document.body.style.overflow = 'visible';
+    };
+  }, [isBurgerMenuOpen]);
 
   return (
     <header className={`headerWrapper ${scrolled && scrollDirection === 'down' || clickNav ? 'hidden' : ''}`}>
       <h1>Thibault Burtinovic</h1>
       <nav className="navHeader">
         <ul className="ulNav">
-          <li className="liNav"><a href="#a-propos">À&nbsp;propos</a></li>
-          <li className="liNav"><a href="#mes-projets">Mes&nbsp;projets</a></li>
-          <li className="liNav"><a href="#contact">Contact</a></li>
+          <li className="liNav"><a href="#a-propos" onClick={handleBurgerItemClick}>À&nbsp;propos</a></li>
+          <li className="liNav"><a href="#mes-projets" onClick={handleBurgerItemClick}>Mes&nbsp;projets</a></li>
+          <li className="liNav"><a href="#contact" onClick={handleBurgerItemClick}>Contact</a></li>
         </ul>
       </nav>
       {/* Menu Burger small device */}
       <nav className="navBurger">
         <div className="menuBurger" onClick={toggleBurgerMenu}>
           <img src={menuBurger} alt="menu burger" className="imgBurger" />
-          <ul className={`${(scrolled && scrollDirection === 'down') || isBurgerMenuOpen ? 'hide' : 'ulBurger'}`}>
-            <li className="liBurger"><a href="#a-propos" onClick={handleBurgerItemClick}>À&nbsp;propos</a></li>
-            <li className="liBurger"><a href="#mes-projets" onClick={handleBurgerItemClick}>Mes&nbsp;projets</a></li>
-            <li className="liBurger"><a href="#contact" onClick={handleBurgerItemClick}>Contact</a></li>
+          <ul className={`${isBurgerMenuOpen ? 'hide' : 'ulBurger'}`}>
+            <div className="compBurger">
+              <img className="iconBurger" src={me} alt="about me" />
+              <li className="liBurger"><a href="#a-propos" onClick={handleBurgerItemClick}>À&nbsp;propos</a></li>
+            </div>
+            <div className="compBurger">
+              <img className="iconBurger" src={project} alt="project" />
+              <li className="liBurger"><a href="#mes-projets" onClick={handleBurgerItemClick}>Mes&nbsp;projets</a></li>
+            </div>
+            <div className="compBurger">
+              <img className="iconBurger" src={mail} alt="contact" />
+              <li className="liBurger"><a href="#contact" onClick={handleBurgerItemClick}>Contact</a></li>
+            </div>
           </ul>
         </div>
       </nav>

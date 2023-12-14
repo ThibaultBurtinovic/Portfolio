@@ -44,10 +44,12 @@
 .userLogo {
     width: 22%;
     min-width: 234px;
+    margin-right: 50px;
 }
 
 .homePageWrapper a {
     align-self: center;
+    
 }
 
 .arrow {
@@ -55,15 +57,14 @@
     min-width: 30px;
     bottom: 50px;
     position: absolute;
-
     animation: bounceUpDown 2.5s infinite alternate;
 
     @keyframes bounceUpDown {
         from {
-            transform: translateY(0); /* Position initiale (haut) */
+            transform: translateY(0) translateX(-15px);/* Position initiale (haut) */
         }
         to {
-            transform: translateY(20px); /* Position finale (bas) */
+            transform: translateY(20px) translateX(-15px); /* Position finale (bas) */
         }
     }
 }
@@ -96,8 +97,7 @@
         column-gap: 70px;
     }
     .userLogo {
-        
-        min-width: 150px;
+        display: none;
     }
   }
   @media (max-width: 500px) {
@@ -109,7 +109,6 @@
         font-size: 25px;
     }
     .userLogo {
-        
         display: none;
     }
 

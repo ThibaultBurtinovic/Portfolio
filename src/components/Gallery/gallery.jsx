@@ -24,6 +24,11 @@ import slide_image_6 from "../../assets/Qwenta.png";
 
 
 function Gallery() {
+
+  const handleSlideChange = (swiper) => {
+    console.log("Slide changed to:", swiper.realIndex + 1);
+  };
+
   return (
     <div className="container">
       <h3 className="heading" id="mes-projets">Mes réalisations</h3>
@@ -48,6 +53,7 @@ function Gallery() {
         }}
         modules={[EffectCoverflow, Pagination, Navigation]}
         className="swiper_container"
+        onSlideChange={(swiper) => handleSlideChange(swiper)}
       >
         <SwiperSlide>
           <div className="slide-container">
@@ -97,24 +103,9 @@ function Gallery() {
           <div className="swiper-pagination"></div>
         </div>
       </Swiper>
+
       <div className="infoProj">
-        <h4 className="titleProj">Problématiques&nbsp;:</h4>
-        <div className="allUl">
-          <ul className="textProj">
-            <li>Booki&nbsp;: Responsive & FlexBox </li>
-            <li>Sophie&nbsp;B.&nbsp;: Fetch & Gestion des classes </li>
-          </ul>
-
-          <ul className="textProj">
-            <li>Nina&nbsp;C.&nbsp;: Optimisation / Resize IMG</li>
-            <li>Kasa.&nbsp;: React components & React Router</li>
-          </ul>
-
-          <ul className="textProj">
-            <li>Vieux&nbsp;G.&nbsp;: Gestion du token bearer & Organisation du code </li>
-            <li>Qwenta&nbsp;: Veille technique & Retranscription écrite</li>
-          </ul>
-        </div>
+        <button className="btnProj">en savoir plus sur ce projet</button>
       </div>
     </div>
 
