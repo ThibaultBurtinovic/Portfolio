@@ -1,0 +1,143 @@
+.modal{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.30);
+    z-index: 5000;
+}
+
+
+.modalWrapper{
+	align-items: center;
+	background-color: #ffffff;
+	border-radius: 10px;
+	border: none;
+	overflow: auto;
+	width: 40%;
+    min-width: 800px;
+	height: 500px;
+	overflow: hidden;
+	position: relative;
+}
+
+
+.hideModal{
+	display: none;
+}
+
+.elementsModal {
+    display: flex;
+    flex-direction: row;
+	justify-content: space-between;
+    column-gap: 50px;
+}
+
+.pictureModal {
+	width: 100%;
+    height: 500px;
+    position: relative;
+	max-width: 100%;
+}
+
+.imgModal {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.logoModal {
+    position: absolute;
+	color: #ffffff;
+	background-color: #0a0a0ae1;
+	text-align: center;
+	font-size: 20px;
+	border-radius: 5px 10px 5px 10px;
+	padding: 5px;
+    bottom: 50%;
+    right: 50%;
+    transform: translate(50%, 50%);
+    margin: 0;
+}
+
+.infoModal {
+	display: flex;
+	flex-direction: column;
+    align-self: center;
+	flex-grow: 2;
+    margin-right: 40px;
+	row-gap: 50px;
+	font-size: 14px;
+	font-weight: 500;
+	max-width: 50%;
+}
+
+
+.quit{
+	display: flex;
+	width: 4%;
+	position: absolute;
+	right: 25px;
+	top: 25px;
+	cursor: pointer;
+	z-index: 10;
+	min-width: 25px;
+}
+
+.tagsModal img {
+	margin-right: 20px;
+	height: 50px;
+}
+
+
+@media (max-width: 1024px) {
+	.modalWrapper{
+		min-width: 680px;
+	}
+  }
+
+@media (max-width: 720px) {
+    .modalWrapper{
+		min-width: 480px;
+		height: 450px;
+	}
+	.elementsModal{
+		flex-direction: column;
+		height: 100%;
+	}
+	.pictureModal{
+		height: 200px;
+		max-width: 100%;
+	}
+	.infoModal{
+		margin: 20px;
+		max-width: 100%;
+		font-size: 13px;
+		row-gap: 0;
+		justify-content: space-between;
+		overflow: auto;
+		p{
+			margin-top: 0;
+			margin-bottom: 15px;
+		}
+	}
+  }
+
+  @media (max-width: 500px) {
+	.modalWrapper{
+		min-width: 280px;
+		height: 450px;
+	}
+
+	.tagsModal img {
+		height: 40px;
+	}
+
+	.infoModal{
+		font-size: 11px;
+	}
+  }

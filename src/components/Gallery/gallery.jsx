@@ -1,8 +1,11 @@
 // Gallery.js
 
-import React from "react";
+import React, { useState } from "react";
 import './gallery.scss';
 import '../../index.scss';
+
+import Modal from '../Modal/modal.jsx';
+import { infoProjets } from '../Modal/infoProjets';
 
 import arrowLeft from "../../assets/arrowLeft.svg";
 import arrowRight from "../../assets/arrowRight.svg";
@@ -23,11 +26,19 @@ import slide_image_5 from "../../assets/Backend.png";
 import slide_image_6 from "../../assets/Qwenta.png";
 
 
+
 function Gallery() {
+  const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
 
   const handleSlideChange = (swiper) => {
-    console.log("Slide changed to:", swiper.realIndex + 1);
+    setCurrentSlideIndex(swiper.realIndex);
   };
+
+  const [isBtnProjClicked, setIsBtnProjClicked] = useState(false);
+  const handleBtnProjClick = () => {
+    setIsBtnProjClicked(true);
+  };
+  
 
   return (
     <div className="container">
@@ -92,7 +103,7 @@ function Gallery() {
           </div>
         </SwiperSlide>
 
-
+          
         <div className="slider-controler">
           <div className="swiper-button-prev slider-arrow">
             <img src={arrowLeft} alt="arrow-left" />
@@ -104,10 +115,15 @@ function Gallery() {
         </div>
       </Swiper>
 
+
       <div className="infoProj">
-        <button className="btnProj">en savoir plus sur ce projet</button>
+        <button className="btnProj" onClick={handleBtnProjClick}>en savoir plus sur ce projet</button>
       </div>
+      
+      <div><Modal currentIndex={currentSlideIndex} projects={infoProjets} isBtnProjClicked={isBtnProjClicked}  setIsBtnProjClicked={setIsBtnProjClicked}/></div>
     </div>
+    
+
 
 
   );

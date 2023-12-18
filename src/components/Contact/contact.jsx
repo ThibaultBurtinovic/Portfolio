@@ -15,6 +15,7 @@ function Contact() {
   const [userName, setUserName] = useState("");
   const [userMessage, setUserMessage] = useState("");
   const [showNotification, setShowNotification] = useState(false);
+  const [showCopyNotification, setShowCopyNotification] = useState(false);
   const [showErrorNotification, setShowErrorNotification] = useState(false);
   const [showErrorMailNotification, setShowErrorMailNotification] = useState(false);
 
@@ -22,7 +23,13 @@ function Contact() {
     if (copyTextRef.current) {
       copyTextRef.current.select();
       document.execCommand('copy');
-      alert('Texte copié dans le presse-papiers : ' + textToCopy);
+
+      setShowCopyNotification(true);
+
+      setTimeout(() => {
+        setShowCopyNotification(false);
+      }, 7000);
+      return;
     }
   };
 
@@ -122,6 +129,7 @@ function Contact() {
 
       {/* Afficher la notification si showNotification est true */}
       {showNotification && <Notification texte="Votre e-mail a bien été envoyé" image={checkMark} />}
+      {showCopyNotification && <Notification texte="Texte copié dans le presse papier" image={checkMark} />}
       {showErrorNotification && <Notification texte="Erreur lors de l'envoi de l'email" image={croix} />}
       {showErrorMailNotification && <Notification texte="Adresse mail invalide" image={croix} />}
     </section>
