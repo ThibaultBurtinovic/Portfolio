@@ -104,8 +104,38 @@ header .liNav:hover {
   flex-direction: column;
 }
 
+@keyframes animBurgerIcon1 {
+  from {
+    opacity: 0.5;
+    rotate: 90deg;
+  }
+
+  to {
+    opacity: 1;
+    rotate: 0deg;
+  }
+}
+
+@keyframes animBurgerIcon2 {
+  from {
+    opacity: 0.5;
+    rotate: -90deg;
+  }
+
+  to {
+    opacity: 1;
+    rotate: 0deg;
+  }
+}
+
+
 .imgBurger {
-  width: 50px;
+  width: 40px;
+  animation: animBurgerIcon1 0.2s ease-in-out forwards;
+}
+.imgBurgerClose {
+  animation: animBurgerIcon2 0.25s ease-in-out forwards;
+  width: 40px;
 }
 
 /* Définition des keyframes pour l'animation */

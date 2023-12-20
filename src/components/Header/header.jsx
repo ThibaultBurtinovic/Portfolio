@@ -5,6 +5,7 @@ import './header.scss';
 
 
 import menuBurger from "../../assets/burger.svg";
+import menuBurgerClose from "../../assets/croixBlack.svg";
 import me from "../../assets/me.svg";
 import project from "../../assets/project.svg";
 import mail from "../../assets/mail.svg";
@@ -88,7 +89,11 @@ function Header() {
       {/* Menu Burger small device */}
       <nav className="navBurger">
         <div className="menuBurger" onClick={toggleBurgerMenu}>
-          <img src={menuBurger} alt="menu burger" className="imgBurger" />
+        {isBurgerMenuOpen ? (
+            <img src={menuBurger} alt="menu burger" className="imgBurger" />
+          ) : (
+            <img src={menuBurgerClose} alt="menu burger" className="imgBurgerClose" />
+          )}
           <ul className={`${isBurgerMenuOpen ? 'hide' : 'ulBurger'}`}>
             <div className="compBurger">
               <img className="iconBurger" src={me} alt="about me" />

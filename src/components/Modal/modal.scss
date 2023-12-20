@@ -9,6 +9,7 @@
 	height: 100%;
 	background: rgba(0, 0, 0, 0.30);
     z-index: 5000;
+	animation: showBackModal 0.4s ease-in-out forwards;
 }
 
 
@@ -23,8 +24,28 @@
 	height: 500px;
 	overflow: hidden;
 	position: relative;
+	animation: showModal 0.5s ease-in-out forwards;
 }
+@keyframes showBackModal {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
 
+
+@keyframes showModal {
+    from {
+      opacity: 0;
+      transform: translateY(100px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0px);
+    }
+  }
 
 .hideModal{
 	display: none;
@@ -70,7 +91,7 @@
     align-self: center;
 	flex-grow: 2;
     margin-right: 40px;
-	row-gap: 50px;
+	row-gap: 30px;
 	font-size: 14px;
 	font-weight: 500;
 	max-width: 50%;
@@ -92,7 +113,6 @@
 	margin-right: 20px;
 	height: 50px;
 }
-
 
 @media (max-width: 1024px) {
 	.modalWrapper{
@@ -116,7 +136,7 @@
 	.infoModal{
 		margin: 20px;
 		max-width: 100%;
-		font-size: 13px;
+		font-size: 14px;
 		row-gap: 0;
 		justify-content: space-between;
 		overflow: auto;
@@ -138,6 +158,16 @@
 	}
 
 	.infoModal{
-		font-size: 11px;
+		font-size: 13px;
 	}
+	.btnGit{
+		margin: 10px;
+	  }
+  }
+
+  .btnGit{
+	max-width: 150px;
+	align-self: center;
+	text-decoration: underline;
+	color: black;
   }

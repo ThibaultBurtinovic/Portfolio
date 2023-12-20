@@ -22,7 +22,7 @@ import slide_image_1 from "../../assets/Booki.png";
 import slide_image_2 from "../../assets/Sophie.png";
 import slide_image_3 from "../../assets/Nina.png";
 import slide_image_4 from "../../assets/Kasa.png";
-import slide_image_5 from "../../assets/Backend.png";
+import slide_image_5 from "../../assets/BackEnd.png";
 import slide_image_6 from "../../assets/Qwenta.png";
 
 

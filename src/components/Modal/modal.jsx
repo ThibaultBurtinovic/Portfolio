@@ -7,7 +7,7 @@ import '../../index.scss';
 
 import croixBlack from "../../assets/croixBlack.svg";
 
-function Modal({ currentIndex, projects, isBtnProjClicked, setIsBtnProjClicked}) {
+function Modal({ currentIndex, projects, isBtnProjClicked, setIsBtnProjClicked }) {
     const [isModalVisible, setIsModalVisible] = useState(false);
 
     const openModal = () => {
@@ -52,6 +52,7 @@ function Modal({ currentIndex, projects, isBtnProjClicked, setIsBtnProjClicked})
                     <div className="infoModal">
                         {description && <p>{description}</p>}
                         {tags && <span className="tagsModal">{tags}</span>}
+                        <a href="https://github.com/ThibaultBurtinovic" className="btnGit" target="_blank" rel="noopener noreferrer">voir sur GitHub </a>
                     </div>
                 </div>
             </div>
